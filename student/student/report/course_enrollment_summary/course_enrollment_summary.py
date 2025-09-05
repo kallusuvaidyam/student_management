@@ -30,17 +30,18 @@ def get_columns() -> list[dict]:
 
 
 def get_data() -> list[list]:
-	# let data = []
+	data = []
 	students = frappe.get_all("Student", ["name", "full_name"])
 	# students = frappe.get_doc("Student", ["name", "full_name"])
 	names = frappe.get_all("Student", pluck="name")
 	print(names, ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 	for student in students:
 		doc = frappe.get_doc("Student", student.name)
-		total_courses = len(doc.get("courses") or [])
-		print(doc.full_name, student.full_name, "//////////////////////////////")
+		total_courses = doc.get("courses") or []
+		# data.append(total_courses)
+		print(data, "//////////////////////////////")
 		
-	
+	return data
 
 
 def get_chart(data):
