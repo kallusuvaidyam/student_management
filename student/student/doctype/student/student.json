@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{full_name}-{###}",
+ "creation": "2025-09-04 12:43:50.561280",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "email",
+  "phone",
+  "admission_date",
+  "fees_paid",
+  "admission_status",
+  "column_break_qzzi",
+  "attach_image",
+  "section_break_azrv",
+  "total_courses_rows",
+  "column_break_bdpg",
+  "total_fees",
+  "section_break_hksa",
+  "courses"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "default": "+91-",
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone",
+   "options": "IND",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "fees_paid",
+   "fieldtype": "Check",
+   "label": "Fees paid"
+  },
+  {
+   "fieldname": "section_break_azrv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "courses",
+   "fieldtype": "Table",
+   "label": "Courses",
+   "options": "Student Course"
+  },
+  {
+   "fieldname": "column_break_qzzi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image"
+  },
+  {
+   "fieldname": "admission_date",
+   "fieldtype": "Date",
+   "label": "Admission Date"
+  },
+  {
+   "fieldname": "admission_status",
+   "fieldtype": "Select",
+   "label": "Admission Status",
+   "options": "Pending\nActive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_fees",
+   "fieldtype": "Currency",
+   "label": "Total Fees",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_courses_rows",
+   "fieldtype": "Int",
+   "label": "Total courses rows",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bdpg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hksa",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "attach_image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-05 12:48:51.164302",
+ "modified_by": "Administrator",
+ "module": "Student",
+ "name": "Student",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name"
+}
